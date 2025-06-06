@@ -1,0 +1,33 @@
+{
+  "server": {
+    "port": 8080,
+    "mode": "debug"
+  },
+  "mongodb": {
+    "dsn": "mongodb://localhost:27017",
+    "database": "nsa",
+    "collection": "configs"
+  },
+  "logging": {
+    "level": "info",
+    "local_logs": {
+      "enabled": true,
+      "path": "./logs"
+    },
+    "graylog": {
+      "enabled": false,
+      "host": "localhost",
+      "port": 12201
+    }
+  },
+  "admin": {
+    "gui_enabled": true,
+    "username": "admin",
+    "password": "admin123",
+    "jwt_secret": "your-jwt-secret-key"
+  },
+  "nsq": {
+    "lookupd_addresses": ["localhost:4161"],
+    "nsqd_addresses": ["localhost:4150"]
+  }
+}
